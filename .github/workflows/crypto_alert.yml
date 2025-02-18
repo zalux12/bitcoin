@@ -1,0 +1,23 @@
+name: Crypto Alert
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Exécute tous les jours à 9h UTC (10h en France)
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloner le repo
+        uses: actions/checkout@v3
+
+      - name: Installer Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Installer les dépendances
+        run: pip install pandas binance smtplib
+
+      - name: Exécuter le script
+        run: python crypto_alert.py
