@@ -17,7 +17,7 @@ jobs:
           python-version: '3.9'
 
       - name: Installer les dépendances
-        run: pip install pandas binance smtplib
+        run: pip install pandas binance
 
       - name: Exécuter le script
         run: python crypto_alert.py
