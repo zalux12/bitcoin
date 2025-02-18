@@ -2,8 +2,8 @@ name: Crypto Alert
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # Exécute tous les jours à 9h UTC (10h en France)
-
+    - cron: '0 9 * * *'  # Exécute tous les jours à 9h UTC
+  workflow_dispatch:   # Permet d'exécuter manuellement le workflow
 jobs:
   run-script:
     runs-on: ubuntu-latest
