@@ -17,7 +17,7 @@ jobs:
           python-version: '3.9'
 
       - name: Installer les dépendances
-        run: pip install pandas binance
+        run: pip install pandas binance requests  # Ajout de "requests"
 
       - name: Exécuter le script
         run: python crypto_alert.py
